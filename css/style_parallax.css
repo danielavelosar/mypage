@@ -1,0 +1,41 @@
+.parallax-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    perspective: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.image{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: 0 50%;
+}
+
+.background-parallax{
+    transform: translateZ(0px) scale(1);
+    width: 100%;
+    height: auto;
+    transform-origin: 0 50%;
+}
+
+.basquiat{
+    transform: translateZ(2px) scale(0.4);
+    width:  20vh;
+    height: auto;
+    transform-origin: 50%;
+    margin-left: 25%;
+}
+.red{
+    transform: translateZ(3px) scale(0.4);
+    transform-origin: top;
+}
+.white{
+    transform: translateZ(4px) scale(0.2);
+    transform-origin: top;
+    top: 75vh;
+
+}

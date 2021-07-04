@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla');
+body{
+    text-transform: uppercase;
+    font-family: Karla;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(to right top, #ffe3eb, #e5d4ef, #b4ccf0, #7bc5db, #62baac);
+    
+}
+
+ 
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 50px;
+
+}
+header .logo-container{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2vh;
+    
+}
+header .logo-container .logo{
+    perspective: 20vh;
+    background-color: rgba( 255, 255, 255, 0.10 );
+    border-radius: 50%;
+}
+
+header .logo-container h1:hover{
+    transform-style: preserve-3d;
+    transform: rotateX(380deg);
+    border: 3px solid plum;
+    border-radius: 50%;
+}
+header .logo-container h1{
+    transition: transform 0.75s  ease-in-out;
+    transition-delay: 0.25s;
+
+}
+header nav .menu{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+    padding-top: 2vh;
+    margin-right: 10px;
+}
+header nav .menu a{
+    padding: 20px;
+    align-self: center;
+    color: ivory;
+}
+
+header nav .menu a:hover{
+    color: rgba(255, 255, 255, 0.5);
+
+}
+.glassmorphism-effect {
+    background: rgba( 255, 255, 255, 0.10 );
+    box-shadow: 08px32px0rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur( 4px );
+            backdrop-filter: blur( 4px );
+    border-radius: 16px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.glassmorphism-effect li{
+    margin-right: inherit;
+    transition: trasform 0.5s ease-out;
+    
+}
+
+.glassmorphism-effect li:hover{
+    transform: translateY(-10px);
+    transition: transform 0.1s ease-in;
+}
+.glassmorphism-effect li:hover li{
+    will-change: transform;
+    transform: translateY(-1px);
+    transition: transform 0.1s ease-in;
+}
+
+
+.glassmorphism-effect li >ul{
+    visibility: hidden;
+    position: absolute;
+    top: 20px;
+    left: -1vh;
+    padding: 2vh;
+    width: 25vh;
+    transition: visibility 0.2 linear;
+    transition-delay: 0.2s;
+}
+.glassmorphism-effect li:hover >ul{
+    visibility: visible;
+    transition: visibility 0.2 linear;
+    transition-delay: 0.05s;
+}
+
+main{
+    text-align: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right top, #ffe3eb, #e5d4ef, #b4ccf0, #7bc5db, #62baac);
+}
+
+.container .background{
+    display: flex;
+    height: 80%;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container button:hover{
+    transform: scaleX(1.02);
+}
+
+.container .image-card{
+    align-self: flex-end;
+    align-self:initial;
+    width: 20vh;
+    height: 20vh;
+    position: relative;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+.container .image-card:hover{
+    transform: rotateY(180deg);
+}
+.container .image-card .card{
+    width: 17vh;
+    height: 17vh;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.container .image-card .card.front-white{
+    background-image:url("../images/Captura1.png");  
+}
+
+.container .image-card .card.back-black{
+    transform: rotateY(180deg);
+    background-image: url("../images/Captura2.png");
+}
+
+.padding-box {
+    box-sizing: border-box;
+    padding: 24px;
+    flex-direction: column;
+}
+
+.bubble {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.bubble-one {
+    height: 80px;
+    left: 300px;
+    top: 10px;
+    width: 80px;
+}
+
+.bubble-two {
+    height: 230px;
+    right: 200px;
+    top: -50px;
+    width: 230px;
+}
+
+.bubble-three {
+    height: 50px;
+    right: 450px;
+    top: -20px;
+    width: 50px;
+}
+
+.bubble-four {
+    bottom: 40px;
+    height: 100px;
+    left: -30px;
+    width: 100px;
+}
+
+@media (prefers-reduced-motion:
+no-preference){
+    .container .image-card{
+        align-self: flex-end;
+        align-self:initial;
+        width: 20vh;
+        height: 20vh;
+        position: relative;
+        box-sizing: border-box;
+        transform-style: preserve-3d;
+    }
+    .container .image-card .card{
+        width: 17vh;
+        height: 17vh;
+        position: absolute;
+    }
+    .container .image-card .card.front-white{
+        background-image:url("../images/Captura1.png");  
+    }
+    
+    .container .image-card .card.back-black{
+        background-image: url("../images/Captura2.png");
+        visibility: hidden;
+    }
+    .container .image-card:hover .card.back-black{
+        visibility: visible;
+        
+    }
+}
